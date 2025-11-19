@@ -3,7 +3,7 @@ A DQN Solution can easily reach high score for Atari Breakout game.
 
 If you feel this repository helpful, please leave a star ⭐, thanks.
 
-🎯 Key Idea: Improving Score with 5 Replay Buffers
+🎯 Key Idea: Improving Score with 5 Replay Buffers (⚠️⚠️⚠️ This trick can help you improve score from 300+ to 400+. You should get a score close to 300 with standard implementation. You can do an ablation study to see how much does this trick contribute.)
 
 In standard DQN implementations, the replay buffer often becomes biased toward experiences from the later stages of the game (e.g., when only a few bricks remain). As the agent masters these later stages, it can gradually “forget” how to play the early stages — and vice versa.
 This imbalance can lead to skewed optimization, where updates mainly reflect whichever stage dominates the replay buffer.
