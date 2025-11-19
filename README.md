@@ -14,7 +14,24 @@ To mitigate this, I introduce a multi-buffer replay system:
 
 This ensures that every training update considers experiences from all stages of the game. By balancing training data across difficulty levels, the optimization remains unbiased, improving overall stability and performance.
 
-I trained with a machine with 32GB RAM and a single NVIDIA 4060Ti GPU. It can reach 250 score after training for 30 mins and reach 350 after training for 1 hour.
+I trained with a machine with 32GB RAM and a single NVIDIA 4060Ti GPU. It can reach 250 score after training for 30 mins and reach 350 after training for 1 hour. Finally, I got 490.
+
+If you want to train from begining, use commands below:
+
+Create environment:
+
+```bash
+conda env create -f environment.yml
+conda activate breakout_solution
+```
+Start training (you need to modify some saving path to your machine)
+```bash
+python ./main.py --train_dqn
+```
+I also uploaded my model parameters(tested_490.37_482.3_episode_6300.ckpt), to test it, use:
+```bash
+python ./main.py --test_dqn
+```
 
 🚨 I listed Common DQN Pitfalls, you can check your implementation with these caveats:
 
