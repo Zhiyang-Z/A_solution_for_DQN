@@ -1,6 +1,8 @@
 # A Solution For DQN
 A DQN Solution can easily reach high score for Atari Breakout game.
 
+If you feel this repository helpful, please leave a star ⭐, thanks.
+
 🎯 Key Idea: Improving Score with 5 Replay Buffers
 
 In standard DQN implementations, the replay buffer often becomes biased toward experiences from the later stages of the game (e.g., when only a few bricks remain). As the agent masters these later stages, it can gradually “forget” how to play the early stages — and vice versa.
@@ -15,6 +17,8 @@ To mitigate this, I introduce a multi-buffer replay system:
 This ensures that every training update considers experiences from all stages of the game. By balancing training data across difficulty levels, the optimization remains unbiased, improving overall stability and performance.
 
 I trained with a machine with 32GB RAM and a single NVIDIA 4060Ti GPU. It can reach 250 score after training for 30 mins and reach 350 after training for 1 hour. Finally, I got 490.
+
+![Demo](record/record.gif)
 
 If you want to train from begining, use commands below:
 
