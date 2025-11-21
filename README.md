@@ -16,7 +16,7 @@ To mitigate this, I introduce a multi-buffer replay system:
 
 This ensures that every training update considers experiences from all stages of the game. By balancing training data across difficulty levels, the optimization remains unbiased, improving overall stability and performance.
 
-I trained on a machine with 32GB RAM and a single NVIDIA 4060Ti GPU. It can reach 250 score after training for 30 mins and reach 350 after training for 1 hour. Finally, I got 490.
+I trained on a machine with Intel Core i5-13500, 32GB RAM and a single NVIDIA 4060Ti GPU (CPU is more important here, since the neural network is not very huge and sample speed is more crucial for collecting experience used for updating). It can reach 250 score after training for around 30 mins and reach 350 after training for 1 hour. Finally, I got 490.
 
 ![Demo](record/record.gif)
 
